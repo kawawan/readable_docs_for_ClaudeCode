@@ -1,6 +1,3 @@
-/* standalone-doc.css — 単発HTML（プロジェクト外の読み物）用の自己完結スタイル。
-   <link> ではなく <style> にインライン展開して使う。家CSSがある場合はそちらを優先し、これは持ち込まない。
-   意図的に最小限。理由なく育てない。 */
 
 :root {
   color-scheme: light dark;
