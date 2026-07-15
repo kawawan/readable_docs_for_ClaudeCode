@@ -1,0 +1,68 @@
+/* standalone-doc.css — 単発HTML（プロジェクト外の読み物）用の自己完結スタイル。
+   <link> ではなく <style> にインライン展開して使う。家CSSがある場合はそちらを優先し、これは持ち込まない。
+   意図的に最小限。理由なく育てない。 */
+
+:root {
+  color-scheme: light dark;
+  --bg: #faf9f5; --fg: #141413; --muted: #6b6a63;
+  --rule: #e8e6dc; --code-bg: #f0eee6; --link: #b4623f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1915; --fg: #eceae3; --muted: #a3a196;
+    --rule: #3a382f; --code-bg: #26241d; --link: #e08a63;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  max-width: 66vw;
+  margin: 0 auto;
+  padding: 4rem 0 6rem;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+@media (max-width: 1000px) { body { max-width: 88vw; } }
+
+h1, h2, h3 { line-height: 1.4; font-weight: 600; margin: 2.4em 0 0.8em; }
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.45rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3em; }
+h3 { font-size: 1.15rem; }
+
+p, li { margin: 0.9em 0; }
+ul, ol { padding-left: 1.4em; }
+li { margin: 0.5em 0; }
+
+a { color: var(--link); text-underline-offset: 2px; }
+
+code {
+  background: var(--code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: "SFMono-Regular", Consolas, "Noto Sans Mono", monospace;
+}
+pre {
+  background: var(--code-bg);
+  padding: 1em 1.2em;
+  border-radius: 8px;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+pre code { background: none; padding: 0; }
+
+table { border-collapse: collapse; width: 100%; margin: 1.4em 0; font-size: 0.95rem; }
+th, td { border: 1px solid var(--rule); padding: 0.5em 0.8em; text-align: left; line-height: 1.6; vertical-align: top; }
+th { background: var(--code-bg); font-weight: 600; }
+
+blockquote { margin: 1.2em 0; padding: 0.2em 1.2em; border-left: 3px solid var(--rule); color: var(--muted); }
+
+details { margin: 1.2em 0; }
+summary { cursor: pointer; font-weight: 600; }
+
+hr { border: none; border-top: 1px solid var(--rule); margin: 2.4em 0; }
+img { max-width: 100%; height: auto; }
