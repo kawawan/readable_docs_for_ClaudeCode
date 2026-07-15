@@ -9,7 +9,11 @@ Claude Codeが出力する情報密度の高い文章を、人間が読みやす
 ## 使い方
 明示的に呼び出したいときは `/読みやすい文章` コマンドを使用してください。単に「このドキュメントを読みやすくして」などでも発火すると思います。
 
-## Before / After
+## 導入方法
+1. `readable-docs/` をダウンロード
+2. `.claude/skills/` に配置
+
+## 使用例：Before / After
 
 **Before:**
 > `atticbak/engine.py`。UIは無い。以下を直列で通す純粋関数の並び：
@@ -25,10 +29,6 @@ Claude Codeが出力する情報密度の高い文章を、人間が読みやす
 > 5. plan.write_prune_plan — prune_plan.json を出力する。
 > 
 > ここまでで削除は一切しません。
-
-## 導入方法
-1. `readable-docs/` をダウンロード
-2. `.claude/skills/` に配置
 
 ## 詳細
  → [ブログ記事(zenn)](https://zenn.dev/zekeynn/articles/4bbb34af17de57)
