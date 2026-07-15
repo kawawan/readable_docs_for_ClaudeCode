@@ -1,0 +1,2 @@
+# readable_docs_for_ClaudeCode
+ClaudeCodeの情報ギチギチの文章を人間が読みやすくほぐすためのスキルです
